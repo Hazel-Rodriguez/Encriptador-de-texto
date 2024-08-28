@@ -44,3 +44,12 @@ function desencriptar (stringDesencriptado){
     return stringDesencriptado;
 }
 
+function copiarTexto() {
+    var texto = document.querySelector(".mensaje").value;
+
+    navigator.clipboard.writeText(texto).then(function() {
+        alert("Texto copiado: " + texto);
+    }).catch(function(error) {
+        alert("Hubo un error al copiar el texto: " + error);
+    });
+}
